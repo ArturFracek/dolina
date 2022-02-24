@@ -1,32 +1,59 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/line/1">TV1</router-link> |
+      <router-link to="/line/2">TV2</router-link> |
+      <router-link to="/line/3">TV3</router-link>
     </div>
+    <router-link id="allLines" to="/">Wszystkie linie</router-link>
     <router-view />
   </div>
 </template>
 
-<style lang="scss">
+<style>
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(3, 2, 65);
+}
 #app {
+  margin: 0;
+  padding: 0;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: 100%;
+  width: 100%;
 }
 
 #nav {
-  padding: 30px;
+  padding: 2vh;
+  font-size: 2.4vh;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+#nav a {
+  font-weight: bold;
+  color: #3998f6;
+  padding: 0 1%;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+#nav a.router-link-exact-active,
+#allLines.router-link-exact-active {
+  color: rgb(25, 204, 228);
+}
+
+#allLines {
+  font-weight: bold;
+  color: #3998f6;
+  margin-bottom: 6%;
+  font-size: 2.4vh;
+  text-decoration: none;
+}
+#allLines:hover,
+#nav a:hover {
+  color: rgb(25, 204, 228);
 }
 </style>
