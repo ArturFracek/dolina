@@ -45,7 +45,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-import { production } from "../mockedData/mocks";
+import { stuffingProduction } from "../mockedData/mocks";
 
 export default {
   data() {
@@ -67,7 +67,7 @@ export default {
   },
   methods: {
     fetchAllLinesData() {
-      let allLinesData = production.map((line) => line);
+      let allLinesData = stuffingProduction.map((line) => line);
       console.log({ ...allLinesData });
       return { ...allLinesData };
     },

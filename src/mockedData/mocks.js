@@ -1,4 +1,4 @@
-export const production = [
+export const stuffingProduction = [
   {
     id: 1,
     produkt: "Szynka / mycie / pozostało do zmiany smaku",

@@ -35,7 +35,7 @@
 <script>
 // @ is an alias to /src
 // import HelloWorld from "@/components/HelloWorld.vue";
-import { production } from "../mockedData/mocks";
+import { stuffingProduction } from "../mockedData/mocks";
 // import { fetchLineById } from "../mockedData/index"
 
 export default {
@@ -58,7 +58,7 @@ export default {
   },
   methods: {
     fetchLineData(lineId) {
-      let lineData = production.find((l) => l.id.toString() === lineId);
+      let lineData = stuffingProduction.find((l) => l.id.toString() === lineId);
       return lineData;
     },
   },
