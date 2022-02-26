@@ -1,14 +1,25 @@
 <template>
   <div id="app">
+    <Nav />
     <div id="nav">
       <router-link to="/line/1">TV1</router-link> |
       <router-link to="/line/2">TV2</router-link> |
       <router-link to="/line/3">TV3</router-link>
     </div>
-    <router-link id="allLines" to="/">Wszystkie linie</router-link>
+    <router-link id="allLines" to="/linie">Wszystkie linie</router-link>
     <router-view />
   </div>
 </template>
+
+<script>
+import Nav from "@/components/Nav";
+
+export default {
+  components: {
+    Nav,
+  },
+};
+</script>
 
 <style>
 body {
