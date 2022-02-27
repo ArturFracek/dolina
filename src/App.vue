@@ -1,22 +1,19 @@
 <template>
   <div id="app">
     <Nav />
-    <div id="nav">
-      <router-link to="/line/1">TV1</router-link> |
-      <router-link to="/line/2">TV2</router-link> |
-      <router-link to="/line/3">TV3</router-link>
-    </div>
-    <router-link id="allLines" to="/linie">Wszystkie linie</router-link>
+    <Production />
     <router-view />
   </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
+import Production from "./views/Production.vue"
 
 export default {
   components: {
     Nav,
+    Production,
   },
 };
 </script>
