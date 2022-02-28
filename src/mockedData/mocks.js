@@ -1,6 +1,6 @@
 export const stuffingProduction = [
   {
-    id: 1,
+    id: "1",
     nr_partii: "1",
     nr_wsadu: "1",
     czas_wykonania_wsady: 10000,
@@ -11,7 +11,7 @@ export const stuffingProduction = [
     przyczyny_awarii: "blokada taśmy produkcyjnej",
   },
   {
-    id: 2,
+    id: "2",
     nr_partii: "2",
     nr_wsadu: "2",
     czas_wykonania_wsady: 20000,
@@ -22,7 +22,7 @@ export const stuffingProduction = [
     przyczyny_awarii: "awaria silnika",
   },
   {
-    id: 3,
+    id: "3",
     nr_partii: "3",
     nr_wsadu: "3",
     czas_wykonania_wsady: 30000,

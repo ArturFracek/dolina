@@ -1,19 +1,17 @@
 <template>
   <div id="app">
     <Nav />
-    <Production />
-    <router-view />
+    <router-view :key="$route.path" />
+    
   </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
-import Production from "./views/Production.vue"
 
 export default {
   components: {
     Nav,
-    Production,
   },
 };
 </script>
@@ -23,7 +21,6 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background-color: rgb(3, 2, 65);
 }
 #app {
   margin: 0;
@@ -64,4 +61,5 @@ body {
 #nav a:hover {
   color: rgb(25, 204, 228);
 }
+
 </style>

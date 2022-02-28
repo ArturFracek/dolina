@@ -33,10 +33,7 @@
 </template>
 
 <script>
-// @ is an alias to /src
-// import HelloWorld from "@/components/HelloWorld.vue";
-import { stuffingProduction } from "../mockedData/mocks";
-// import { fetchLineById } from "../mockedData/index"
+import { fetchLineById } from "../mockedData/index";
 
 export default {
   data() {
@@ -47,19 +44,16 @@ export default {
   name: "lineView",
   watch: {
     "$route.params.lineId": {
-      // co mam obserwować
-      // "" dlatego że klucz z kropkami jest błędnym zapisem - vue ogarnia wtedy jak damy ""
-      immediate: true, // true jezeli ma sie odpalic odrazu na mouted
+      immediate: true,
       async handler(lineId) {
-        // handler to funcka która odpali się kiedy obserwowana wartosc sie zmieni ( wszystko z this., z $route, z vuexa) a lineId to Nowa wartosc po zmianie
-        this.line = await this.fetchLineData(lineId); // ciało funkcji
+        if (!lineId) return;
+        await this.loadLineById(lineId);
       },
     },
   },
   methods: {
-    fetchLineData(lineId) {
-      let lineData = stuffingProduction.find((l) => l.id.toString() === lineId);
-      return lineData;
+    async loadLineById(id) {
+      this.line = await fetchLineById(id);
     },
   },
 };

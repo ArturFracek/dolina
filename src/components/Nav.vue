@@ -52,7 +52,7 @@ $background-white: rgb(251, 251, 251);
 }
 
 .home {
-  margin-right: 20vw;
+  margin-right: auto;
 }
 .archives {
   margin-right: auto;

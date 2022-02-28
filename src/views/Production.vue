@@ -16,8 +16,11 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+$background-white: rgb(228, 228, 228);
+
 .production {
   height: 93vh;
   width: 100vw;
+  background-color: $background-white;
 }
 </style>
